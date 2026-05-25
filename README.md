@@ -1,6 +1,6 @@
 # DevTrack
 
-AI-powered developer analytics and growth platform.
+AI-powered developer analytics and growth insights platform.
 
 ## Features
 - GitHub profile analysis
