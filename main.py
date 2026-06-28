@@ -3,10 +3,6 @@
 # Importing necessary libraries
 import requests
 
-# Start of the application
-print("DevTrack")
-print("AI-powered developer analytics and growth insights platform\n")
-
 # Functions
 
 def make_request(url):
@@ -55,7 +51,7 @@ def calculate_total_stars(repositories):
 
     return total_stars
 
-def get_most_starred_repositories(repositories):
+def get_most_starred_repository(repositories):
     if not repositories:
         return None
     return max(
@@ -108,6 +104,11 @@ def most_used_language(languages):
 # --------------------------------------------------------------
     # main function to run the application
 def main():
+    
+    # Start of the application
+    print("DevTrack")
+    print("AI-powered developer analytics and growth insights platform\n")
+
     # User input and main logic
     username = input("Enter GitHub username: ")
     data = fetch_github_profile(username) # fetch developer profile information function call
@@ -148,7 +149,7 @@ def main():
 
     # Most starred repositories
     print("\nMost Starred Repositories:")
-    most_starred_repo = get_most_starred_repositories(repos) # get most starred repositories function call
+    most_starred_repo = get_most_starred_repository(repos) # get most starred repositories function call
     if most_starred_repo:
         print(f"\nMost Starred Repository: {most_starred_repo.get('name')}")
         print(f"Stars: {most_starred_repo.get('stargazers_count')}")
